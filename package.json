@@ -1,0 +1,30 @@
+{
+  "name": "Project-WebSite",
+  "version": "1.0.0",
+  "description": "Modelo estático de um WebSite, usando typescript, sass e gulp.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Solrac-Art/Zay-Shop.git"
+  },
+  "keywords": [
+    "studyes",
+    "languages",
+    "sass",
+    "typescript",
+    "WebSite",
+    "static",
+    "gulp",
+    "Project Front-End",
+    "Arquitecture Front-End"
+  ],
+  "author": "Carlos Eduardo <solrac.art@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Solrac-Art/Zay-Shop/issues"
+  },
+  "homepage": "https://github.com/Solrac-Art/Zay-Shop#readme"
+}
