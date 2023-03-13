@@ -1,0 +1,28 @@
+.input {
+    color: $color-nigth;
+    width: 100%;
+    font-size: 1em;
+    padding: 0.375em 0.75em;
+    background-color: $color-light;
+    border: 0.0625em solid $color-gray;
+    border-radius: 0.25em;
+
+    &--night {
+        background-color: $color-night;
+        color: $color-gray;
+    }
+
+    &::placeholder {
+        color: $color-gray;
+    }
+
+    &:focus {
+        border-color: $color-primary;
+        transition: border-color .5s ease;
+    }
+
+    &:focus::placeholder {
+        color: $color-nigth;
+        transition: color .5s ease;
+    }
+}
