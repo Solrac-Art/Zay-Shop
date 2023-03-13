@@ -1,0 +1,13 @@
+.link {
+    text-decoration: none;
+    color: $color-nigth;
+
+    &--light {
+        color: $color-gray;
+    }
+
+    &:hover {
+        color: $color-primary;
+        transition: color .5s ease;
+    }
+}
