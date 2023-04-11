@@ -1,12 +1,16 @@
 "use strict"
 
-const buildStyle = require("./buildStyle");
-const buildScript = require("./buildScript");
+const buildStyle = require("./buildStyle.js");
+const buildScript = require("./buildScript.js");
+const buildImage = require("./buildImage.js");
  
 
 
-module.exports.buildStyle = buildStyle.default;
-module.exports.watchSass = buildStyle.watch;
+exports.buildStyle = buildStyle.default;
+exports.watchSass = buildStyle.watch;
 
-module.exports.buildScript = buildScript.default;
-module.exports.watchTs = buildScript.watch;
+exports.buildScript = buildScript.default;
+exports.watchTs = buildScript.watch;
+
+exports.buildImage = buildImage.default;
+exports.watchImgs = buildImage.watch;
