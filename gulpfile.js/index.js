@@ -3,6 +3,7 @@
 const buildStyle = require("./buildStyle.js");
 const buildScript = require("./buildScript.js");
 const buildImage = require("./buildImage.js");
+const buildHtml = require("./buildHtml.js");
  
 
 
@@ -14,3 +15,6 @@ exports.watchTs = buildScript.watch;
 
 exports.buildImage = buildImage.default;
 exports.watchImgs = buildImage.watch;
+
+exports.buildHtml = buildHtml.default;
+exports.watchHtml = buildHtml.watch;
