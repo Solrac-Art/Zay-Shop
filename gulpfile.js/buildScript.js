@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const gulpTs = require("gulp-typescript");
 const gulpClean = require("gulp-clean");
+const gulpMinifier = require("gulp-minifier");
 const projectTs = gulpTs.createProject("tsconfig.json");
 
 function clearFilesJs() {
@@ -14,9 +15,22 @@ function compileFilesTs() {
     return tsResult.js.pipe(gulp.dest("./public/assets/js"));
 }
 
-function watchFilesTs() {
-    gulp.watch("./app/src/**/*.ts", compileFilesTs);
+function minifyJs() {
+    return gulp.src("./public/assets/js/**/*.js")
+        .pipe(gulpMinifier({
+            minify: true,
+            minifyJS: {
+                sourceMap: false
+            }   
+        }))
+        .pipe(gulp.dest("./public/assets/js"));
 }
 
-exports.default = gulp.series(clearFilesJs, compileFilesTs);
+const buildScript = gulp.series(compileFilesTs, minifyJs);
+
+function watchFilesTs() {
+    gulp.watch("./app/src/**/*.ts", buildScript);
+}
+
+exports.default = gulp.series(clearFilesJs, buildScript);
 exports.watch = watchFilesTs;
