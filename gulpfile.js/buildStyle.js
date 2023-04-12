@@ -14,7 +14,7 @@ function compileFilesSass() {
 }
 
 function watchFilesSass() {
-    gulp.watch("./app/styles/**/*.scss", compileFilesSass);
+    return gulp.watch("./app/styles/**/*.scss", compileFilesSass);
 }
 
 exports.default = gulp.series(clearFilesCss, compileFilesSass);

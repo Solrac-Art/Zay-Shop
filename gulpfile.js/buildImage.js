@@ -13,8 +13,8 @@ function minifyImages() {
         .pipe(gulp.dest("./public/assets/img"))
 }
 
-exports.watchImages = function () {
-    gulp.watch("./app/galery/**/*", minifyImages);
+exports.watch = function () {
+    return gulp.watch("./app/galery/**/*", minifyImages);
 }
 
 exports.default = gulp.series(clearImages, minifyImages);

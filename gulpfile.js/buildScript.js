@@ -5,7 +5,7 @@ const gulpMinifier = require("gulp-minifier");
 const projectTs = gulpTs.createProject("tsconfig.json");
 
 function clearFilesJs() {
-    return gulp.src("./public/assets/js/**/*", {read: false})
+    return gulp.src("./public/assets/js/**/*.js", {read: false})
         .pipe(gulpClean())
 }
 
@@ -29,7 +29,7 @@ function minifyJs() {
 const buildScript = gulp.series(compileFilesTs, minifyJs);
 
 function watchFilesTs() {
-    gulp.watch("./app/src/**/*.ts", buildScript);
+    return gulp.watch("./app/src/**/*.ts", buildScript);
 }
 
 exports.default = gulp.series(clearFilesJs, buildScript);

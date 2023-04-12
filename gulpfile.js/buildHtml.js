@@ -23,10 +23,10 @@ function minifyHtml() {
         .pipe(gulp.dest("./public/"))
 }
 
-const buildHtml = gulp.series(clearHtml, includeComponents, minifyHtml);
+const buildHtml = gulp.series(includeComponents, minifyHtml);
 
-exports.watchHtml = function () {
-    gulp.watch("./app/pages/*.html", buildHtml);
+exports.watch = function () {
+    return gulp.watch("./app/pages/*.html", buildHtml);
 }
 
-exports.default = buildHtml;
+exports.default = gulp.series(clearHtml, buildHtml);

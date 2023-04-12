@@ -1,20 +1,28 @@
 "use strict"
-
+const gulp = require("gulp");
 const buildStyle = require("./buildStyle.js");
 const buildScript = require("./buildScript.js");
 const buildImage = require("./buildImage.js");
 const buildHtml = require("./buildHtml.js");
  
 
+exports.default = gulp.series(
+    buildHtml.default,
+    buildStyle.default,
+    buildScript.default,
+    buildImage.default
+)
 
-exports.buildStyle = buildStyle.default;
-exports.watchSass = buildStyle.watch;
+exports.build = gulp.series(
+    buildHtml.default,
+    buildStyle.default,
+    buildScript.default,
+    buildImage.default
+)
 
-exports.buildScript = buildScript.default;
-exports.watchTs = buildScript.watch;
-
-exports.buildImage = buildImage.default;
-exports.watchImgs = buildImage.watch;
-
-exports.buildHtml = buildHtml.default;
-exports.watchHtml = buildHtml.watch;
+exports.dev = gulp.parallel(
+    buildHtml.watch,
+    buildStyle.watch,
+    buildScript.watch,
+    buildImage.watch
+)
