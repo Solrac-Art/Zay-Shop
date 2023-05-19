@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "./public/assets/js",
+        "target": "ES6",
+        "removeComments": true,
+        "noEmitOnError": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "Node"
+    },
+    "include": ["./app/src/**/*"]
+}
