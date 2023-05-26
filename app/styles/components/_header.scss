@@ -1,0 +1,112 @@
+.header {
+    background-color: $color-light;
+    padding: 0.5em 0em;
+
+    .container,
+    &__navigation {
+        row-gap: 1em;
+    }
+
+
+    &__logo img{
+        width: 4.875em;
+    }
+
+    &__menu {
+        line-height: 0;   
+        
+        svg {
+            width: 2.5em;
+            height: 2.5em;
+            stroke: $color-light-muted;
+        }
+    }
+
+
+    &__navigation {
+        width: 100%;
+        flex-grow: 1;
+        // display: none;
+
+
+        & > div  {
+            width: 100%;
+            gap: 1.25em;
+        }
+
+        &__links ul{
+            gap: 0.25em;
+
+            li {
+                width: 100%;
+            }
+
+            .link{
+                display: block;
+                font-weight: 600;
+                padding: 0.5em;
+            }
+
+
+        }
+
+        &__search {
+            flex-grow: 1;
+
+            &__form {
+                position: relative;
+
+                .input {
+                    padding-inline-end: 2.5em;
+                }
+
+                &__button {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    line-height: 0;
+                    width: 2.5em;
+                    height: 100%;
+
+                    &:hover .icon{
+                        color: $color-primary;
+                        transition: color .5s ease;
+
+                    }
+                }
+            }
+        }
+
+        &__buttons {
+            gap: 1.25em;                
+
+            &__search {
+                display: none;
+            }
+
+            &__search,
+            &__cart,
+            &__user {
+                position: relative; 
+                font-size: 1.25em;
+            }
+
+            &__cart__badge,
+            &__user__badge {
+                position: absolute;
+                padding: 0.25em 0.5em;
+                font-size: 0.75em;
+                color: $color-night;
+                background-color: $color-lightblue;
+                border-radius: 1rem;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &--active {
+            display: flex;
+        }
+    }
+}
+
+
