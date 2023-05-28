@@ -4,7 +4,7 @@
 
     .container,
     &__navigation {
-        row-gap: 1em;
+        gap: 1em;
     }
 
 
@@ -35,7 +35,7 @@
         }
 
         &__links ul{
-            gap: 0.25em;
+            gap: 0.25em 7.6511%;
 
             li {
                 width: 100%;
@@ -61,12 +61,12 @@
                 }
 
                 &__button {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    line-height: 0;
                     width: 2.5em;
                     height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    line-height: 0;
 
                     &:hover .icon{
                         color: $color-primary;
@@ -109,4 +109,75 @@
     }
 }
 
+@media screen and (max-width: 180px){
+    .header {
+        .container,
+        &__navigation > div,
+        &__navigation__links ul,
+        &__navigation__buttons {
+            text-align: center;
+            justify-content: center;
+        }
+    }    
+}
 
+@media screen and (min-width: 700px){
+    .header {
+    
+        &__menu {
+            display: none; 
+        }
+        
+        &__navigation {
+            display: flex;
+            width: max-content;
+    
+            & > div  {
+                width: max-content;
+            }
+    
+            &__links {
+                flex-grow: 1;
+
+                ul li {
+                    width: max-content;
+                }
+            }
+    
+            &__search {
+                display: none;
+            }
+    
+            &__buttons__search {
+                display: inline;                
+            }    
+        }
+    }    
+}
+
+@media screen and (min-width: 1024px){
+    .header {
+        &__navigation {
+            display: flex;
+            width: max-content;
+    
+            & > div  {
+                width: max-content;
+                flex-grow: 1;     
+
+                &.header__navigation__links {
+                    flex-grow: 6;
+                }           
+            }
+
+            &__search {
+                display: block;
+                flex-grow: 1;
+            }
+    
+            &__buttons__search {
+                display: none;                
+            }    
+        }
+    }    
+}
