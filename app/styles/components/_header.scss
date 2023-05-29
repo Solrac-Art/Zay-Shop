@@ -23,10 +23,10 @@
     
     
     &__navigation {
+        display: none;
         width: 100%;
         flex-grow: 1;
         gap: 1em;
-        // display: none;
 
 
         & > div  {
