@@ -1,5 +1,5 @@
 .input {
-    color: $color-nigth;
+    color: $color-night;
     width: 100%;
     font-size: 1em;
     padding: 0.375em 0.75em;
@@ -22,7 +22,7 @@
     }
 
     &:focus::placeholder {
-        color: $color-nigth;
+        color: $color-night;
         transition: color .5s ease;
     }
 }
