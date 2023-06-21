@@ -1,0 +1,51 @@
+<header class="header">
+    <div class="container fx fx--between">
+        <div class="header__logo">
+            <a href="./index.html" title="Zay Shop">
+                <img src="assets/img/logos/apple-icon.png" alt="Logo Zay">
+            </a>
+        </div>
+        <button class="header__menu toggle" type="button">
+            <svg class="icon icon--light" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                <title>Menu</title>
+                <line x1="80" y1="160" x2="432" y2="160" style="fill:none;stroke:inherit;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
+                <line x1="80" y1="256" x2="432" y2="256" style="fill:none;stroke:inherit;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
+                <line x1="80" y1="352" x2="432" y2="352" style="fill:none;stroke:inherit;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
+            </svg>
+        </button>
+        <nav class="header__navigation fx">
+            <div class="header__navigation__links">
+                <ul class="fx fx--center">
+                    <li><a class="link" href="./index.html">Home</a></li>
+                    <li><a class="link" href="./about.html">About</a></li>
+                    <li><a class="link" href="./shop.html">Shop</a></li>
+                    <li><a class="link" href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="fx fx--between">
+                <div class="header__navigation__search">
+                    <form class="header__navigation__search__form" action="/shop" method="get">
+                        <input type="text" name="search" placeholder="Search..." class="input">
+                        <button class="header__navigation__search__form__button" type="submit" title="Search">
+                            <span class="fa fa-search icon"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="header__navigation__buttons fx">                
+                    <button class="header__navigation__buttons__button__search link" type="button" title="Search">
+                        <span class="header__navigation__buttons__button__search__icon fa fa-search icon"></span>
+                        <svg class="header__navigation__buttons__button__search__close icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><title>Close</title><path d="M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z"/></svg>
+                    </button>                        
+                    <a class="header__navigation__buttons__button__cart link" href="#" title="Shopping Cart">
+                        <span class="fa fa-cart-arrow-down icon"></span>
+                        <span class="header__navigation__buttons__button__cart__badge">7</span>
+                    </a>                        
+                    <a class="header__navigation__buttons__button__user link" href="#" title="Account">
+                        <span class="fa fa-user icon"></span>
+                        <span class="header__navigation__buttons__button__user__badge">+99</span>
+                    </a>                                            
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
