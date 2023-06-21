@@ -25,8 +25,10 @@ function minifyHtml() {
 
 const buildHtml = gulp.series(includeComponents, minifyHtml);
 
-exports.watch = function () {
-    return gulp.watch("./app/pages/*.html", buildHtml);
+const watchFilesHtml = () => {
+    gulp.watch("./app/components/*.html", buildHtml)
+    gulp.watch("./app/pages/*.html", buildHtml)
 }
+exports.watch = watchFilesHtml;
 
 exports.default = gulp.series(clearHtml, buildHtml);
