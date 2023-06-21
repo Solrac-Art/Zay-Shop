@@ -1,1 +1,8 @@
 /* <{--------------------------[ Imports ]--------------------------}> */
+@import "./reset.scss";
+@import "./variables.scss";
+
+:root {
+    font-size: 16px;
+    font-family: $text-font;
+}

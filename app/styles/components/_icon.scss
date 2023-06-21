@@ -1,0 +1,22 @@
+.icon {
+    color: $color-night;
+    stroke: $color-night;
+    fill: $color-night;
+    font-size: 1.25rem;
+    
+    
+    
+    &--light {
+        color: $color-gray;
+        stroke: $color-gray;
+        fill: $color-gray;
+    }
+
+    &:hover,
+    &:active {
+        stroke: $color-primary;
+        color: $color-primary;
+        fill: $color-primary;
+        transition: color .5s ease, stroke .5s ease;
+    }
+}

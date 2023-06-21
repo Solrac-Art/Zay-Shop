@@ -1,12 +1,13 @@
 .link {
     text-decoration: none;
-    color: $color-nigth;
+    color: $color-night;
 
     &--light {
         color: $color-gray;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
         color: $color-primary;
         transition: color .5s ease;
     }
